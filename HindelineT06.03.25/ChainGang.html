@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chain Gang - Pedal Faster</title>
+    <link rel="stylesheet" href="css/960_12_col.css">
+    <style>
+        @font-face {
+            font-family: 'QuicksandBook';
+            src: url('fonts/Quicksand_Book-webfont.eot');
+        }
+        body {
+            color: #ffffff;
+            background: #413f3b url("images/bg.jpg");
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 90%;
+            margin: 0px;
+            text-align: center;
+        }
+        a {
+            color: #b5c1ad;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        .header {
+            background-image: url("images/bg-header.jpg");
+            padding: 0px 0px 0px 0px;
+            height: 100px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 50;
+        }
+
+        .nav {
+            float: right;
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            padding: 45px 0px 0px 0px;
+        }
+
+        .wrapper {
+            width: 960px;
+            margin: 0px auto;
+            background-image: url("images/bg-triangle.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            text-align: left;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+
+        h1 {
+            font-size: 240%;
+            margin-top: 140px;
+        }
+       
+        .intro {
+            clear: left;
+            font-size: 90%;
+            line-height: 1.4em;
+        }
+        .main-story {
+            background-image: url("images/triangles.png");
+            background-repeat: no-repeat;
+            background-position: 122px 142px;
+            height: 570px;
+        }
+           
+        .footer {
+            clear: both;
+            background: rgba(0,0,0,0.2);
+            padding: 5px 10px;
+        }
+        .footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            text-align: right;
+        }
+        .footer a {
+            color: #807c72;
+        }
+        .chain-content {
+            background-color: rgba(65, 63, 59, 0.7);
+            padding: 25px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .tech-highlight {
+            background: rgba(181, 193, 173, 0.2);
+            padding: 15px;
+            border-radius: 3px;
+            margin: 15px 0;
+        }
+
+        .history-point {
+            border-left: 3px solid #b5c1ad;
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+
+        .chain-image {
+            border: 2px solid #b5c1ad;
+            margin: 15px 0;
+            max-width: 100%;
+        }
+
+        .spec-comparison {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        .spec-comparison th,
+        .spec-comparison td {
+            padding: 8px;
+            border-bottom: 1px dotted rgba(181, 193, 173, 0.3);
+        }
+
+        .spec-comparison th {
+            color: #b5c1ad;
+            text-align: left;
+        }
+        .back-button {
+        position: absolute;
+        left: 10px;
+        font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+        font-size: 200%;
+        color: #b5c1ad;
+        }
+        .back-button:hover {
+            color: #ffffff;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="container_12">
+                <div class="grid_5">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Pedal Faster - The modern bicycle magazine" width="216" height="37" class="logo" />
+                    </a>
+                    <img src="images/header-triangle.png" alt="" width="116" height="100" />
+                </div>
+                <div class="nav grid_7">
+                    <a href="index.html">home</a> / 
+                    <a href="news.html">news</a> / 
+                    <a href="archives.html">archives</a> / 
+                    <a href="about.html">about</a> / 
+                    <a href="contact.html">contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="main-story container_12">
+                <div class="grid_12">
+                    <h1>Chain Gang: The Evolution of Bicycle Chains</h1>
+                    
+                    <article class="grid_8 alpha">
+                        <div class="chain-content">
+                            <img src="images/chain-evolution.jpg" alt="Bicycle Chain Evolution" class="chain-image" />
+                            
+                            <div class="tech-highlight">
+                                <h2>Quick Facts</h2>
+                                <p>• First bicycle chain patent: 1880<br>
+                                • Modern roller chain design: 1898<br>
+                                • Average chain links: 116<br>
+                                • Typical lifespan: 2,000-3,000 miles</p>
+                            </div>
+    
+                            <div class="history-point">
+                                <h3>The Early Days</h3>
+                                <p>Before the chain drive, bicycles relied on direct drive mechanisms. 
+                                The introduction of the roller chain revolutionized cycling, enabling 
+                                efficient power transfer and variable gear ratios.</p>
+                            </div>
+    
+                            <h3>Chain Technology Comparison</h3>
+                            <table class="spec-comparison">
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Durability</th>
+                                    <th>Weight</th>
+                                    <th>Cost</th>
+                                </tr>
+                                <tr>
+                                    <td>Standard Steel</td>
+                                    <td>High</td>
+                                    <td>280g</td>
+                                    <td>$20-30</td>
+                                </tr>
+                                <tr>
+                                    <td>Nickel Plated</td>
+                                    <td>Very High</td>
+                                    <td>285g</td>
+                                    <td>$40-50</td>
+                                </tr>
+                                <tr>
+                                    <td>Titanium</td>
+                                    <td>Excellent</td>
+                                    <td>180g</td>
+                                    <td>$200+</td>
+                                </tr>
+                            </table>
+    
+                            <div class="history-point">
+                                <h3>Modern Innovations</h3>
+                                <p>Today's chains incorporate advanced materials and coatings, 
+                                with some featuring hollow pins and plates to reduce weight while 
+                                maintaining strength.</p>
+                            </div>
+                        </div>
+                    </article>
+    
+                    <aside class="grid_4 omega">
+                        <div class="chain-content">
+                            <h3>Maintenance Tips</h3>
+                            <ul>
+                                <li>Regular cleaning</li>
+                                <li>Proper lubrication</li>
+                                <li>Wear monitoring</li>
+                                <li>Tension adjustment</li>
+                            </ul>
+    
+                            <div class="tech-highlight">
+                                <h3>Chain Care Essentials</h3>
+                                <p>Recommended cleaning interval:<br>
+                                • Dry conditions: 200 miles<br>
+                                • Wet conditions: 100 miles<br>
+                                • Racing: Every event</p>
+                            </div>
+    
+                            <h3>Future Developments</h3>
+                            <p>• Self-lubricating chains<br>
+                            • Smart wear indicators<br>
+                            • Carbon fiber composites<br>
+                            • Maintenance-free designs</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+    
+            <div class="footer clearfix">
+                <div class="container_12">
+                    <p class="grid_12">
+                        <a href="javascript:history.back()" class="back-button">← Back</a> |
+                        <a href="LegalInformation.html">Legal Information</a> | 
+                        <a href="PrivacyPolicy.html">Privacy Policy</a> | 
+                        <a href="Copyright.html">Copyright &copy; Pedal Faster 2025</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+        

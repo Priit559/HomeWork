@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review - Bicycle Basket</title>
+    <link rel="stylesheet" href="css/960_12_col.css">
+    <style>
+        @font-face {
+            font-family: 'QuicksandBook';
+            src: url('fonts/Quicksand_Book-webfont.eot');
+        }
+        body {
+            color: #ffffff;
+            background: #413f3b url("images/bg.jpg");
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 90%;
+            margin: 0px;
+            text-align: center;
+        }
+        a {
+            color: #b5c1ad;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        .header {
+            background-image: url("images/bg-header.jpg");
+            padding: 0px 0px 0px 0px;
+            height: 100px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 50;
+        }
+
+        .nav {
+            float: right;
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            padding: 45px 0px 0px 0px;
+        }
+
+        .wrapper {
+            width: 960px;
+            margin: 0px auto;
+            background-image: url("images/bg-triangle.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            text-align: left;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+
+        h1 {
+            font-size: 240%;
+            margin-top: 140px;
+        }
+       
+        .intro {
+            clear: left;
+            font-size: 90%;
+            line-height: 1.4em;
+        }
+        .main-story {
+            background-image: url("images/triangles.png");
+            background-repeat: no-repeat;
+            background-position: 122px 142px;
+            height: 570px;
+        }
+           
+        .footer {
+            clear: both;
+            background: rgba(0,0,0,0.2);
+            padding: 5px 10px;
+        }
+        .footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            text-align: right;
+        }
+        .footer a {
+            color: #807c72;
+        }
+        .review-content {
+            background-color: rgba(65, 63, 59, 0.7);
+            padding: 25px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .product-image {
+            border: 2px solid #b5c1ad;
+            margin: 15px 0;
+            max-width: 100%;
+        }
+
+        .rating-stars {
+            color: #b5c1ad;
+            font-size: 120%;
+            margin: 10px 0;
+        }
+
+        .pros-cons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .pros, .cons {
+            width: 45%;
+        }
+
+        .pros h3, .cons h3 {
+            color: #b5c1ad;
+            margin-bottom: 10px;
+        }
+
+        .price-tag {
+            background: rgba(181, 193, 173, 0.2);
+            padding: 5px 10px;
+            border-radius: 3px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        .specs-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        .specs-table th, .specs-table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px dotted rgba(181, 193, 173, 0.3);
+        }
+        .back-button {
+        position: absolute;
+        left: 10px;
+        font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+        font-size: 200%;
+        color: #b5c1ad;
+        }
+        .back-button:hover {
+            color: #ffffff;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="container_12">
+                <div class="grid_5">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Pedal Faster - The modern bicycle magazine" width="216" height="37" class="logo" />
+                    </a>
+                    <img src="images/header-triangle.png" alt="" width="116" height="100" />
+                </div>
+                <div class="nav grid_7">
+                    <a href="index.html">home</a> / 
+                    <a href="news.html">news</a> / 
+                    <a href="archives.html">archives</a> / 
+                    <a href="about.html">about</a> / 
+                    <a href="contact.html">contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="main-story container_12">
+                <div class="grid_12">
+                    <h1>Product Review: Bicycle Baskets</h1>
+                    
+                    <article class="grid_8 alpha">
+                        <div class="review-content">
+                            <img src="images/basket-classic.jpg" alt="Classic Woven Basket" class="product-image" />
+                            
+                            <h2>Classic Woven Willow Basket</h2>
+                            <div class="price-tag">€49.99</div>
+                            <div class="rating-stars">★★★★☆ (4.2/5)</div>
+    
+                            <p>In an age of carbon fiber and synthetic materials, there's something 
+                            refreshingly authentic about a traditional willow basket. We tested five 
+                            premium bicycle baskets over three months of daily use.</p>
+    
+                            <div class="pros-cons">
+                                <div class="pros">
+                                    <h3>Pros</h3>
+                                    <ul>
+                                        <li>Excellent build quality</li>
+                                        <li>Weather resistant</li>
+                                        <li>Classic aesthetic</li>
+                                        <li>Easy mounting system</li>
+                                    </ul>
+                                </div>
+                                <div class="cons">
+                                    <h3>Cons</h3>
+                                    <ul>
+                                        <li>Slightly heavy</li>
+                                        <li>Limited color options</li>
+                                        <li>Premium price point</li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                            <table class="specs-table">
+                                <tr>
+                                    <th>Material</th>
+                                    <td>Natural Willow</td>
+                                </tr>
+                                <tr>
+                                    <th>Capacity</th>
+                                    <td>16 Liters</td>
+                                </tr>
+                                <tr>
+                                    <th>Weight</th>
+                                    <td>1.2 kg</td>
+                                </tr>
+                                <tr>
+                                    <th>Mounting</th>
+                                    <td>Quick-Release System</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </article>
+    
+                    <aside class="grid_4 omega">
+                        <div class="review-content">
+                            <h3>Also Tested</h3>
+                            <ul>
+                                <li>ModernCarry Canvas Basket</li>
+                                <li>UrbanGear Metal Mesh</li>
+                                <li>EcoBasket Bamboo Series</li>
+                                <li>SportCarry Waterproof</li>
+                            </ul>
+    
+                            <h3>Testing Criteria</h3>
+                            <p>• Durability<br>
+                            • Water resistance<br>
+                            • Mounting stability<br>
+                            • Load capacity<br>
+                            • Style factor</p>
+    
+                            <h3>Where to Buy</h3>
+                            <p>Available at selected retailers:<br>
+                            • CycleWorld<br>
+                            • BikeStyle<br>
+                            • Urban Pedaler</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <div class="footer clearfix">
+                <div class="container_12">
+                    <p class="grid_12">
+                        <a href="javascript:history.back()" class="back-button">← Back</a> |
+                        <a href="LegalInformation.html">Legal Information</a> | 
+                        <a href="PrivacyPolicy.html">Privacy Policy</a> | 
+                        <a href="Copyright.html">Copyright &copy; Pedal Faster 2025</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

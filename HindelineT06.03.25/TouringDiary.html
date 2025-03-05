@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touring Diary - Pedal Faster</title>
+    <link rel="stylesheet" href="css/960_12_col.css">
+    <style>
+        @font-face {
+            font-family: 'QuicksandBook';
+            src: url('fonts/Quicksand_Book-webfont.eot');
+        }
+        body {
+            color: #ffffff;
+            background: #413f3b url("images/bg.jpg");
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 90%;
+            margin: 0px;
+            text-align: center;
+        }
+        a {
+            color: #b5c1ad;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        .header {
+            background-image: url("images/bg-header.jpg");
+            padding: 0px 0px 0px 0px;
+            height: 100px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 50;
+        }
+
+        .nav {
+            float: right;
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            padding: 45px 0px 0px 0px;
+        }
+
+        .wrapper {
+            width: 960px;
+            margin: 0px auto;
+            background-image: url("images/bg-triangle.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            text-align: left;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+
+        h1 {
+            font-size: 240%;
+            margin-top: 140px;
+        }
+       
+        .intro {
+            clear: left;
+            font-size: 90%;
+            line-height: 1.4em;
+        }
+        .main-story {
+            background-image: url("images/triangles.png");
+            background-repeat: no-repeat;
+            background-position: 122px 142px;
+            height: 570px;
+        }
+           
+        .footer {
+            clear: both;
+            background: rgba(0,0,0,0.2);
+            padding: 5px 10px;
+        }
+        .footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            text-align: right;
+        }
+        .footer a {
+            color: #807c72;
+        }
+        .diary-entry {
+            background-color: rgba(65, 63, 59, 0.7);
+            padding: 25px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .diary-date {
+            color: #b5c1ad;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .sketch-caption {
+            font-size: 85%;
+            color: #b5c1ad;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .route-details {
+            border-left: 3px solid #b5c1ad;
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+
+        .weather-note {
+            font-style: italic;
+            color: #b5c1ad;
+            margin: 10px 0;
+        }
+
+        .gear-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .gear-list li {
+            padding: 5px 0;
+            border-bottom: 1px dotted rgba(181, 193, 173, 0.3);
+        }
+        .back-button {
+        position: absolute;
+        left: 10px;
+        font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+        font-size: 200%;
+        color: #b5c1ad;
+        }
+        .back-button:hover {
+            color: #ffffff;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="container_12">
+                <div class="grid_5">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Pedal Faster - The modern bicycle magazine" width="216" height="37" class="logo" />
+                    </a>
+                    <img src="images/header-triangle.png" alt="" width="116" height="100" />
+                </div>
+                <div class="nav grid_7">
+                    <a href="index.html">home</a> / 
+                    <a href="news.html">news</a> / 
+                    <a href="archives.html">archives</a> / 
+                    <a href="about.html">about</a> / 
+                    <a href="contact.html">contact</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="wrapper">
+            <div class="main-story container_12">
+                <div class="grid_12">
+                    <h1>Touring Diary: A sightseeing tour on a bike</h1>
+                    
+                    <article class="grid_8 alpha">
+                        <div class="diary-entry">
+                            <h2>Baltic Coast Tour</h2>
+                            <p class="diary-date">Day 1 - March 15, 2025</p>
+                            
+                            <img src="images/coastdawn.jpg" alt="Coastal Sketch" width="100%" />
+                            <p class="sketch-caption">At dawn</p>
+    
+                            <div class="route-details">
+                                <p>Distance: 85km<br>
+                                Elevation: +450m<br>
+                                Time: 4h 35min</p>
+                            </div>
+    
+                            <p>Dawn broke over the coast as I packed my backbag. I will remember 
+                            this scene for a along time, i quickly grabbed the camera to capture it.
+                            The light was changing fast, so I had to work quickly. 
+                            </p>
+    
+                            <p class="weather-note">☀️ Clear skies, light northerly wind, 12°C</p>
+    
+                            <h3>Today's Route Highlights</h3>
+                            <ul>
+                                <li>Coastal fishing villages</li>
+                                <li>Pine forests meeting sand dunes</li>
+                                <li>Ancient wooden churches</li>
+                                <li>Harbor market lunch stop</li>
+                            </ul>
+                        </div>
+                    </article>
+    
+                    <aside class="grid_4 omega">
+                        <div class="diary-entry">
+                            <h3>Photography Essentials</h3>
+                            <ul class="gear-list">
+                                <li>Camera</li>
+                                <li>Tripod</li>
+                                <li>Lenses</li>
+                                <li>Flash</li>
+                            </ul>
+    
+                            <h3>Cycling Essentials</h3>
+                            <ul class="gear-list">
+                                <li>Brooks saddle</li>
+                                <li>Ortlieb panniers</li>
+                                <li>Camping stove</li>
+                                <li>Weather radio</li>
+                            </ul>
+    
+                            <h3>Next Destinations</h3>
+                            <p>• Coastal lighthouses<br>
+                            • Medieval town squares<br>
+                            • Forest cycling paths<br>
+                            • Seaside camping spots</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+    
+            <div class="footer clearfix">
+                <div class="container_12">
+                    <p class="grid_12">
+                        <a href="javascript:history.back()" class="back-button">← Back</a> |
+                        <a href="">Legal Information</a> | 
+                        <a href="">Privacy Policy</a> | 
+                        <a href="">Copyright &copy; Pedal Faster 2025</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

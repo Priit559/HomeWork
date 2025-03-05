@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame Wars - Pedal Faster</title>
+    <link rel="stylesheet" href="css/960_12_col.css">
+    <style>
+        @font-face {
+            font-family: 'QuicksandBook';
+            src: url('fonts/Quicksand_Book-webfont.eot');
+        }
+        body {
+            color: #ffffff;
+            background: #413f3b url("images/bg.jpg");
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 90%;
+            margin: 0px;
+            text-align: center;
+        }
+        a {
+            color: #b5c1ad;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        .header {
+            background-image: url("images/bg-header.jpg");
+            padding: 0px 0px 0px 0px;
+            height: 100px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 50;
+        }
+
+        .nav {
+            float: right;
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            padding: 45px 0px 0px 0px;
+        }
+
+        .wrapper {
+            width: 960px;
+            margin: 0px auto;
+            background-image: url("images/bg-triangle.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            text-align: left;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+
+        h1 {
+            font-size: 240%;
+            margin-top: 140px;
+        }
+       
+        .intro {
+            clear: left;
+            font-size: 90%;
+            line-height: 1.4em;
+        }
+        .main-story {
+            background-image: url("images/triangles.png");
+            background-repeat: no-repeat;
+            background-position: 122px 142px;
+            height: 570px;
+        }
+           
+        .footer {
+            clear: both;
+            background: rgba(0,0,0,0.2);
+            padding: 5px 10px;
+        }
+        .footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            text-align: right;
+        }
+        .footer a {
+            color: #807c72;
+        }
+        .frame-content {
+            background-color: rgba(65, 63, 59, 0.7);
+            padding: 25px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th, 
+        .comparison-table td {
+            padding: 10px;
+            border-bottom: 1px solid #b5c1ad;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            color: #b5c1ad;
+            font-weight: normal;
+        }
+
+        .material-highlight {
+            background-color: rgba(181, 193, 173, 0.1);
+        }
+
+        .tech-specs {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tech-specs li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tech-specs li:before {
+            content: "•";
+            color: #b5c1ad;
+            position: absolute;
+            left: 0;
+        }
+        .back-button {
+        position: absolute;
+        left: 10px;
+        font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+        font-size: 200%;
+        color: #b5c1ad;
+        }
+        .back-button:hover {
+            color: #ffffff;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="container_12">
+                <div class="grid_5">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Pedal Faster - The modern bicycle magazine" width="216" height="37" class="logo" />
+                    </a>
+                    <img src="images/header-triangle.png" alt="" width="116" height="100" />
+                </div>
+                <div class="nav grid_7">
+                    <a href="index.html">home</a> / 
+                    <a href="news.html">news</a> / 
+                    <a href="archives.html">archives</a> / 
+                    <a href="about.html">about</a> / 
+                    <a href="contact.html">contact</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="wrapper">
+            <div class="main-story container_12">
+                <div class="grid_12">
+                    <h1>Frame Wars: The Evolution of Bicycle Manufacturing</h1>
+                    
+                    <article class="grid_8 alpha">
+                        <div class="frame-content">
+                            <p class="date">March 2, 2025</p>
+                            <img src="images/frame-manufacturing.jpg" alt="Modern Bicycle Frame Manufacturing" class="history-image" />
+                            
+                            <h2>The Future of Frame Building</h2>
+                            <p>From traditional steel to cutting-edge carbon fiber, the bicycle frame industry 
+                            has undergone a remarkable transformation. Today's manufacturers are pushing the 
+                            boundaries of what's possible in frame design and construction.</p>
+    
+                            <h3>Material Revolution</h3>
+                            <table class="comparison-table">
+                                <tr>
+                                    <th>Material</th>
+                                    <th>Weight</th>
+                                    <th>Durability</th>
+                                    <th>Cost</th>
+                                </tr>
+                                <tr>
+                                    <td>Steel</td>
+                                    <td>High</td>
+                                    <td>Excellent</td>
+                                    <td>Low</td>
+                                </tr>
+                                <tr class="material-highlight">
+                                    <td>Carbon Fiber</td>
+                                    <td>Very Low</td>
+                                    <td>Good</td>
+                                    <td>High</td>
+                                </tr>
+                                <tr>
+                                    <td>Aluminum</td>
+                                    <td>Low</td>
+                                    <td>Good</td>
+                                    <td>Medium</td>
+                                </tr>
+                                <tr>
+                                    <td>Titanium</td>
+                                    <td>Medium</td>
+                                    <td>Excellent</td>
+                                    <td>Very High</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </article>
+    
+                    <aside class="grid_4 omega">
+                        <div class="frame-content">
+                            <h3>Innovation Spotlight</h3>
+                            <ul class="tech-specs">
+                                <li>3D-printed titanium lugs</li>
+                                <li>Nano-carbon reinforcement</li>
+                                <li>Adaptive flex zones</li>
+                                <li>Smart frame sensors</li>
+                                <li>Bio-composite materials</li>
+                            </ul>
+    
+                            <h3>Manufacturing Methods</h3>
+                            <p>• TIG Welding<br>
+                            • Carbon Layup<br>
+                            • Hydroforming<br>
+                            • Additive Manufacturing</p>
+    
+                            <h3>Future Trends</h3>
+                            <p>• Recyclable composites<br>
+                            • AI-optimized geometries<br>
+                            • Self-healing materials<br>
+                            • Mass customization</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+    
+            <div class="footer clearfix">
+                <div class="container_12">
+                    <p class="grid_12">
+                        <a href="javascript:history.back()" class="back-button">← Back</a> |
+                        <a href="LegalInformation.html">Legal Information</a> | 
+                        <a href="PrivacyPolicy.html">Privacy Policy</a> | 
+                        <a href="Copyright.html">Copyright &copy; Pedal Faster 2025</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

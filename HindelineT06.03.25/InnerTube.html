@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerTube - The best Cycling Videos</title>
+    <link rel="stylesheet" href="css/960_12_col.css">
+    <style>
+        @font-face {
+            font-family: 'QuicksandBook';
+            src: url('fonts/Quicksand_Book-webfont.eot');
+        }
+        body {
+            color: #ffffff;
+            background: #413f3b url("images/bg.jpg");
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 90%;
+            margin: 0px;
+            text-align: center;
+        }
+        a {
+            color: #b5c1ad;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        .header {
+            background-image: url("images/bg-header.jpg");
+            padding: 0px 0px 0px 0px;
+            height: 100px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 50;
+        }
+
+        .nav {
+            float: right;
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            padding: 45px 0px 0px 0px;
+        }
+
+        .wrapper {
+            width: 960px;
+            margin: 0px auto;
+            background-image: url("images/bg-triangle.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            text-align: left;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+
+        h1 {
+            font-size: 240%;
+            margin-top: 140px;
+        }
+       
+        .intro {
+            clear: left;
+            font-size: 90%;
+            line-height: 1.4em;
+        }
+        .main-story {
+            background-image: url("images/triangles.png");
+            background-repeat: no-repeat;
+            background-position: 122px 142px;
+            height: 570px;
+        }
+           
+        .footer {
+            clear: both;
+            background: rgba(0,0,0,0.2);
+            padding: 5px 10px;
+        }
+        .footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            text-align: right;
+        }
+        .video-grid {
+            background-color: rgba(65, 63, 59, 0.7);
+            padding: 25px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .video-item {
+            margin-bottom: 25px;
+            border-bottom: 1px dotted rgba(181, 193, 173, 0.3);
+            padding-bottom: 20px;
+        }
+
+        .video-item:last-child {
+            border-bottom: none;
+        }
+
+        .video-thumbnail {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            border: 2px solid #b5c1ad;
+            border-radius: 3px;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-thumbnail:hover img {
+            opacity: 0.7;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            font-size: 48px;
+            opacity: 0.8;
+        }
+
+        .video-title {
+            color: #b5c1ad;
+            font-size: 120%;
+            margin-bottom: 10px;
+        }
+
+        .video-meta {
+            font-size: 85%;
+            color: #807c72;
+            margin-bottom: 10px;
+        }
+
+        .video-description {
+            line-height: 1.5;
+        }
+
+        .categories {
+            margin-top: 20px;
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: rgba(181, 193, 173, 0.2);
+            padding: 5px 10px;
+            margin: 0 5px 5px 0;
+            border-radius: 3px;
+            font-size: 85%;
+        }
+        .footer a {
+            color: #807c72;
+        }
+        .back-button {
+        position: absolute;
+        left: 10px;
+        font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+        font-size: 200%;
+        color: #b5c1ad;
+        }
+        .back-button:hover {
+            color: #ffffff;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="container_12">
+                <div class="grid_5">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Pedal Faster - The modern bicycle magazine" width="216" height="37" class="logo" />
+                    </a>
+                    <img src="images/header-triangle.png" alt="" width="116" height="100" />
+                </div>
+                <div class="nav grid_7">
+                    <a href="index.html">home</a> / 
+                    <a href="news.html">news</a> / 
+                    <a href="archives.html">archives</a> / 
+                    <a href="about.html">about</a> / 
+                    <a href="contact.html">contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="main-story container_12">
+                <div class="grid_12">
+                    <h1>InnerTube: Best Cycling Videos</h1>
+                    
+                    <div class="grid_8 alpha">
+                        <div class="video-grid">
+                            <article class="video-item">
+                                <a href="https://www.youtube.com/watch?v=example1" target="_blank">
+                                    <div class="video-thumbnail">
+                                        <img src="images/video1.jpg" alt="Mountain Biking Adventure">
+                                        <span class="play-icon">▶</span>
+                                    </div>
+                                </a>
+                                <h2 class="video-title">Epic Mountain Descent</h2>
+                                <p class="video-meta">Duration: 4:35 | Views: 125K</p>
+                                <p class="video-description">Follow pro rider John Thompson as she tackles 
+                                the legendary Alpine Trail in perfect conditions.</p>
+                                <div class="categories">
+                                    <span class="category-tag">Mountain Biking</span>
+                                    <span class="category-tag">Pro Riders</span>
+                                </div>
+                            </article>
+    
+                            <article class="video-item">
+                                <a href="https://www.youtube.com/watch?v=example2" target="_blank">
+                                    <div class="video-thumbnail">
+                                        <img src="images/video2.jpg" alt="Urban Fixed Gear">
+                                        <span class="play-icon">▶</span>
+                                    </div>
+                                </a>
+                                <h2 class="video-title">City Lights: Fixed Gear Night Riding</h2>
+                                <p class="video-meta">Duration: 3:15 | Views: 89K</p>
+                                <p class="video-description">Experience the thrill of night riding through 
+                                downtown with the local fixed gear community.</p>
+                                <div class="categories">
+                                    <span class="category-tag">Fixed Gear</span>
+                                    <span class="category-tag">Urban</span>
+                                </div>
+                            </article>
+    
+                            <article class="video-item">
+                                <a href="https://www.youtube.com/watch?v=example3" target="_blank">
+                                    <div class="video-thumbnail">
+                                        <img src="images/video3.jpg" alt="Maintenance Tutorial">
+                                        <span class="play-icon">▶</span>
+                                    </div>
+                                </a>
+                                <h2 class="video-title">Essential Maintenance Tips</h2>
+                                <p class="video-meta">Duration: 8:45 | Views: 203K</p>
+                                <p class="video-description">Master mechanic Tom Chen shares his top tips 
+                                for keeping your bike in perfect condition.</p>
+                                <div class="categories">
+                                    <span class="category-tag">Tutorial</span>
+                                    <span class="category-tag">Maintenance</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+    
+                    <aside class="grid_4 omega">
+                        <div class="video-grid">
+                            <h3>Popular Categories</h3>
+                            <ul>
+                                <li>Mountain Biking</li>
+                                <li>Road Cycling</li>
+                                <li>Urban & Fixed Gear</li>
+                                <li>Maintenance</li>
+                                <li>Product Reviews</li>
+                            </ul>
+    
+                            <h3>Featured Creators</h3>
+                            <p>• Sarah Thompson<br>
+                            • Urban Pedals Crew<br>
+                            • Tom Chen<br>
+                            • Trail Raiders</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+    
+            <div class="footer clearfix">
+                <div class="container_12">
+                    <p class="grid_12">
+                        <a href="javascript:history.back()" class="back-button">← Back</a> |
+                        <a href="LegalInformation.html">Legal Information</a> | 
+                        <a href="PrivacyPolicy.html">Privacy Policy</a> | 
+                        <a href="Copyright.html">Copyright &copy; Pedal Faster 2025</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

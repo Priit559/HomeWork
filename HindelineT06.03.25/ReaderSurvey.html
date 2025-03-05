@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reader Survey - Pedal Faster</title>
+    <link rel="stylesheet" href="css/960_12_col.css">
+    <style>
+        @font-face {
+            font-family: 'QuicksandBook';
+            src: url('fonts/Quicksand_Book-webfont.eot');
+        }
+        body {
+            color: #ffffff;
+            background: #413f3b url("images/bg.jpg");
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 90%;
+            margin: 0px;
+            text-align: center;
+        }
+        a {
+            color: #b5c1ad;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        .header {
+            background-image: url("images/bg-header.jpg");
+            padding: 0px 0px 0px 0px;
+            height: 100px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 50;
+        }
+
+        .nav {
+            float: right;
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            padding: 45px 0px 0px 0px;
+        }
+
+        .wrapper {
+            width: 960px;
+            margin: 0px auto;
+            background-image: url("images/bg-triangle.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            text-align: left;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+
+        h1 {
+            font-size: 240%;
+            margin-top: 140px;
+        }
+       
+        .intro {
+            clear: left;
+            font-size: 90%;
+            line-height: 1.4em;
+        }
+        .main-story {
+            background-image: url("images/triangles.png");
+            background-repeat: no-repeat;
+            background-position: 122px 142px;
+            height: 570px;
+        }
+           
+        .footer {
+            clear: both;
+            background: rgba(0,0,0,0.2);
+            padding: 5px 10px;
+        }
+        .footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            text-align: right;
+        }
+        .footer a {
+            color: #807c72;
+        }
+        .survey-form {
+            background-color: rgba(65, 63, 59, 0.7);
+            padding: 25px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #b5c1ad;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #b5c1ad;
+            border-radius: 3px;
+            color: #413f3b;
+        }
+
+        .form-group textarea {
+            height: 120px;
+        }
+
+        .rating-group {
+            display: flex;
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        .rating-group label {
+            display: inline;
+        }
+
+        .submit-btn {
+            background-color: #b5c1ad;
+            color: #413f3b;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #ffffff;
+        }
+
+        .info-box {
+            background: rgba(181, 193, 173, 0.2);
+            padding: 15px;
+            border-radius: 3px;
+            margin: 15px 0;
+        }
+        .back-button {
+        position: absolute;
+        left: 10px;
+        font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+        font-size: 200%;
+        color: #b5c1ad;
+        }
+        .back-button:hover {
+            color: #ffffff;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="container_12">
+                <div class="grid_5">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Pedal Faster - The modern bicycle magazine" width="216" height="37" class="logo" />
+                    </a>
+                    <img src="images/header-triangle.png" alt="" width="116" height="100" />
+                </div>
+                <div class="nav grid_7">
+                    <a href="index.html">home</a> / 
+                    <a href="news.html">news</a> / 
+                    <a href="archives.html">archives</a> / 
+                    <a href="about.html">about</a> / 
+                    <a href="contact.html">contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="main-story container_12">
+                <div class="grid_12">
+                    <h1>Reader Survey: Share Your Thoughts</h1>
+                    
+                    <div class="grid_8 alpha">
+                        <div class="survey-form">
+                            <p class="date">March 2025 Edition</p>
+                            
+                            <form action="#" method="post">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+    
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+    
+                                <div class="form-group">
+                                    <label>How long have you been reading Pedal Faster?</label>
+                                    <select name="reading_duration" required>
+                                        <option value="">Select an option</option>
+                                        <option value="new">Less than 6 months</option>
+                                        <option value="regular">6-12 months</option>
+                                        <option value="loyal">1-2 years</option>
+                                        <option value="veteran">More than 2 years</option>
+                                    </select>
+                                </div>
+    
+                                <div class="form-group">
+                                    <label>Rate our content (1-5)</label>
+                                    <div class="rating-group">
+                                        <label><input type="radio" name="rating" value="1"> 1</label>
+                                        <label><input type="radio" name="rating" value="2"> 2</label>
+                                        <label><input type="radio" name="rating" value="3"> 3</label>
+                                        <label><input type="radio" name="rating" value="4"> 4</label>
+                                        <label><input type="radio" name="rating" value="5"> 5</label>
+                                    </div>
+                                </div>
+    
+                                <div class="form-group">
+                                    <label for="feedback">What topics would you like to see more of?</label>
+                                    <textarea id="feedback" name="feedback" required></textarea>
+                                </div>
+    
+                                <button type="submit" class="submit-btn">Submit Survey</button>
+                            </form>
+                        </div>
+                    </div>
+    
+                    <aside class="grid_4 omega">
+                        <div class="survey-form">
+                            <h3>Why Your Opinion Matters</h3>
+                            <p>Your feedback helps us create better content and improve your reading experience.</p>
+    
+                            <div class="info-box">
+                                <h3>Survey Benefits</h3>
+                                <ul>
+                                    <li>Shape future content</li>
+                                    <li>Influence special features</li>
+                                    <li>Enter prize drawings</li>
+                                    <li>Join reader panel</li>
+                                </ul>
+                            </div>
+    
+                            <h3>Monthly Prize Draw</h3>
+                            <p>Complete the survey to enter our monthly draw for:</p>
+                            <ul>
+                                <li>Premium bike accessories</li>
+                                <li>Annual subscriptions</li>
+                                <li>Workshop vouchers</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+    
+            <div class="footer clearfix">
+                <div class="container_12">
+                    <p class="grid_12">
+                        <a href="javascript:history.back()" class="back-button">← Back</a> |
+                        <a href="LegalInformation.html">Legal Information</a> | 
+                        <a href="PrivacyPolicy.html">Privacy Policy</a> | 
+                        <a href="Copyright.html">Copyright &copy; Pedal Faster 2025</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+        
