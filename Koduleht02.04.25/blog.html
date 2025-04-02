@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestPal Construction - Blog</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            background: url('https://picsum.photos/1920/1080?random=5') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .content-wrapper {
+            background-color: rgba(255, 255, 255, 0.9);
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+        .blog-post {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">BestPal Construction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="container py-5">
+            <h1 class="text-center mb-5">Construction Blog</h1>
+            
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-post p-3 mb-4">
+                        <img src="https://picsum.photos/400/300?random=1" class="img-fluid rounded mb-3" alt="Blog image">
+                        <h3>Modern Wooden House Trends</h3>
+                        <p class="text-muted">Posted on March 15, 2024</p>
+                        <p>Discover the latest trends in wooden house construction and sustainable building practices.</p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-post p-3 mb-4">
+                        <img src="https://picsum.photos/400/300?random=2" class="img-fluid rounded mb-3" alt="Blog image">
+                        <h3>Eco-Friendly Construction</h3>
+                        <p class="text-muted">Posted on March 20, 2024</p>
+                        <p>Learn about environmentally conscious building materials and energy-efficient designs.</p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-post p-3 mb-4">
+                        <img src="https://picsum.photos/400/300?random=3" class="img-fluid rounded mb-3" alt="Blog image">
+                        <h3>Facade Renovation Tips</h3>
+                        <p class="text-muted">Posted on March 25, 2024</p>
+                        <p>Expert advice on maintaining and renovating your building's facade for lasting beauty.</p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-post p-3 mb-4">
+                        <img src="https://picsum.photos/400/300?random=4" class="img-fluid rounded mb-3" alt="Blog image">
+                        <h3>Element House Benefits</h3>
+                        <p class="text-muted">Posted on March 28, 2024</p>
+                        <p>Why element houses are becoming increasingly popular in modern construction.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

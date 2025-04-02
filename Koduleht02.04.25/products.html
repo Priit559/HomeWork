@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestPal Construction - Products</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .content-wrapper {
+            background-color: white;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-image {
+            height: 250px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+        }
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #198754;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section" style="height: 60vh; background: url('https://picsum.photos/1920/1080?random=6') no-repeat center center; background-size: cover; position: relative;">
+        <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4);"></div>
+        <div class="container h-100 d-flex align-items-center" style="position: relative; z-index: 2;">
+            <div class="text-white">
+                <h1 class="display-3 fw-bold">Quality Construction Materials</h1>
+                <p class="lead">Building your dreams with premium products</p>
+            </div>
+        </div>
+    </section>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">BestPal Construction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="container py-5">
+            <h1 class="text-center mb-5">Our Products</h1>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card">
+                        <img src="https://picsum.photos/400/300?random=10" class="product-image w-100" alt="Wooden House">
+                        <div class="p-3">
+                            <h3>Modern Wooden House</h3>
+                            <p>Eco-friendly wooden house with modern design and sustainable materials.</p>
+                            <p class="price">€150,000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card">
+                        <img src="https://picsum.photos/400/300?random=11" class="product-image w-100" alt="Element House">
+                        <div class="p-3">
+                            <h3>Element House Package</h3>
+                            <p>Pre-fabricated element house with quick assembly and high energy efficiency.</p>
+                            <p class="price">€120,000</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card">
+                        <img src="https://picsum.photos/400/300?random=12" class="product-image w-100" alt="Facade Service">
+                        <div class="p-3">
+                            <h3>Facade Renovation</h3>
+                            <p>Complete facade renovation service with premium materials and expert installation.</p>
+                            <p class="price">From €5,000</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card">
+                        <img src="https://picsum.photos/400/300?random=13" class="product-image w-100" alt="Repair Services">
+                        <div class="p-3">
+                            <h3>Repair Services</h3>
+                            <p>Professional repair and maintenance services for all types of buildings.</p>
+                            <p class="price">€80/hour</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestPal Construction Ltd.</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <style>
+        .carousel-item img {
+            height: 600px;
+            object-fit: cover;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">BestPal Construction Ltd.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light ms-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/1920/1080?random=1" class="d-block w-100" alt="Company Image 1">
+                <div class="carousel-caption">
+                    <h2>Welcome to Our Company</h2>
+                    <p>Innovative Solutions for Tomorrow</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/1920/1080?random=2" class="d-block w-100" alt="Company Image 2">
+                <div class="carousel-caption">
+                    <h2>Quality Services</h2>
+                    <p>*Wooden houses</p>
+                    <p>*Element houses</p>
+                    <p>*Facades</p>
+                    <p>*Repair work</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/1920/1080?random=3" class="d-block w-100" alt="Company Image 3">
+                <div class="carousel-caption">
+                    <h2>Expert Team</h2>
+                    <p>Professionalism is our priority to help find the best solution</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/1920/1080?random=4" class="d-block w-100" alt="Company Image 4">
+                <div class="carousel-caption">
+                    <h2>Global Reach</h2>
+                    <p>We work globally. Regardless of your location, 
+                    we will find a way to make your dreams come true.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginType" class="form-label">Login with</label>
+                            <select class="form-select" id="loginType" onchange="toggleLoginFields()">
+                                <option value="email">Email</option>
+                                <option value="username">Username</option>
+                            </select>
+                        </div>
+                        <div class="mb-3" id="emailField">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="mb-3 d-none" id="usernameField">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleLoginFields() {
+            const loginType = document.getElementById('loginType').value;
+            const emailField = document.getElementById('emailField');
+            const usernameField = document.getElementById('usernameField');
+            
+            if (loginType === 'email') {
+                emailField.classList.remove('d-none');
+                usernameField.classList.add('d-none');
+                document.getElementById('email').required = true;
+                document.getElementById('username').required = false;
+            } else {
+                emailField.classList.add('d-none');
+                usernameField.classList.remove('d-none');
+                document.getElementById('email').required = false;
+                document.getElementById('username').required = true;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestPal Construction - Contact</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            background: url('https://picsum.photos/1920/1080?random=7') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .content-wrapper {
+            background-color: rgba(255, 255, 255, 0.9);
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+        .contact-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+        }
+        .map-container {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">BestPal Construction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="container py-5">
+            <h1 class="text-center mb-5">Contact Us</h1>
+            
+            <div class="row g-4">
+
+                <div class="col-md-6">
+                    <div class="contact-card p-4 mb-4">
+                        <h3>Get in Touch</h3>
+                        <p class="mb-4">We'd love to hear from you. Please use the contact information below or fill out the form.</p>
+                        
+                        <h5>Address:</h5>
+                        <p>Sõpruse Puiestee 182<br>Tallinn, Estonia</p>
+                        
+                        <h5>Email:</h5>
+                        <p><a href="mailto:info@bestpal.ee">info@bestpal.ee</a></p>
+                        
+                        <h5>Phone:</h5>
+                        <p><a href="tel:+3725555555">+372 5555 5555</a></p>
+                        
+                        <h5>Business Hours:</h5>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                        Saturday: 10:00 AM - 4:00 PM<br>
+                        Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="contact-card p-4 mb-4">
+                        <h3>Send us a Message</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="contact-card p-4">
+                        <h3 class="mb-4">Our Location</h3>
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2032.1445466806477!2d24.69893037687994!3d59.39913997490431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469295a6cd4fc383%3A0x27bf4sensor!2sS%C3%B5pruse%20pst%20182%2C%2013423%20Tallinn!5e0!3m2!1sen!2see!4v1710334721024!5m2!1sen!2see"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
