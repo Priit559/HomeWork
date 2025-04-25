@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game-header h1 {
+    color: #FF6B6B;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.board-container {
+    display: flex;
+    justify-content: center;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.candy {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.candy.red {
+    background-image: url('images/Red.png') !important;
+}
+.candy.blue {
+    background-image: url('images/Blue.png') !important;
+}
+.candy.green {
+    background-image: url('images/Green.png') !important;
+}
+.candy.yellow {
+    background-image: url('images/Yellow.png') !important;
+}
+.candy.purple {
+    background-image: url('images/Purple.png') !important;
+}
+.candy.orange {
+    background-image: url('images/Orange.png') !important;
+}
+
+.candy:hover {
+    transform: scale(1.05);
+}
+
+.candy.selected {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px gold;
+}
+
+.striped-blue-horizontal {
+    background-image: url('images/striped-blue-horizontal.png') !important;
+    transform: rotate(90deg);
+}
+.striped-blue-vertical {
+    background-image: url('images/striped-blue-vertical.png') !important;
+    transform: rotate(0deg);
+}
+.striped-red-horizontal {
+    background-image: url('images/striped-red-horizontal.png') !important;
+    transform: rotate(90deg);
+}
+.striped-red-vertical {
+    background-image: url('images/striped-red-vertical.png') !important;
+    transform: rotate(0deg);
+}
+.striped-green-horizontal {
+    background-image: url('images/striped-green-horizontal.png') !important;
+    transform: rotate(90deg);
+}
+.striped-green-vertical {
+    background-image: url('images/striped-green-vertical.png') !important;
+    transform: rotate(0deg);
+}
+.striped-yellow-horizontal {
+    background-image: url('images/striped-yellow-horizontal.png') !important;
+    transform: rotate(90deg);
+}
+.striped-yellow-vertical {
+    background-image: url('images/striped-yellow-vertical.png') !important;
+    transform: rotate(0deg);
+}
+.striped-purple-horizontal {
+    background-image: url('images/striped-purple-horizontal.png') !important;
+    transform: rotate(90deg);
+}
+.striped-purple-vertical {
+    background-image: url('images/striped-purple-vertical.png') !important;
+    transform: rotate(0deg);
+}
+.striped-orange-horizontal {
+    background-image: url('images/striped-orange-horizontal.png') !important;
+    transform: rotate(90deg);
+}
+.striped-orange-vertical {
+    background-image: url('images/striped-orange-vertical.png') !important;
+    transform: rotate(0deg);
+}
+.candy.wrapped {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wrapped.red {
+    background-image: url('images/wrapped-red.png') !important;
+}
+.wrapped.blue {
+    background-image: url('images/wrapped-blue.png') !important;
+}
+.wrapped.green {
+    background-image: url('images/wrapped-green.png') !important;
+}
+.wrapped.yellow {
+    background-image: url('images/wrapped-yellow.png') !important;
+}
+.wrapped.purple {
+    background-image: url('images/wrapped-purple.png') !important;
+}
+.wrapped.orange {
+    background-image: url('images/wrapped-orange.png') !important;
+}
+
+.chocolate {
+    background-image: url('images/chocolate-candy.png') !important;
+}
+
+.game-over {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.game-over h2 {
+    color: #FF6B6B;
+}
+
+#restart-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#restart-btn:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div id="score">Score: 0 | Level: 1</div>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="gameOver">GAME OVER</div>
+    </div>
+
+    <div style="display: none;">
+        <img id="shipImg" src="./images/ship.png" alt="ship">
+        <img id="alien1" src="./images/alien-blue.png" alt="alien1">
+        <img id="alien2" src="./images/alien-green.png" alt="alien2">
+        <img id="alien3" src="./images/alien-orange.png" alt="alien3">
+    </div>
+    
+    <script src="./js/utils.js"></script>
+    <script src="./js/alien.js"></script>
+    <script src="./js/bullet.js"></script>
+    <script src="./js/player.js"></script>
+    <script src="./js/game.js"></script>
+</body>
+</html>
