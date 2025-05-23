@@ -1,0 +1,155 @@
+﻿@model AJAXHomePage.Models.ViewModels.CustomerCreateVM
+@{
+    ViewData["Title"] = "Create Customer";
+}
+
+<h1>Create Customer</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data" id="createCustomerForm" onsubmit="return false;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" id="FirstName" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" id="LastName" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" id="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CountryId" class="control-label" for="countrySelect"></label>
+                <select asp-for="CountryId" asp-items="Model.Countries" class="form-control" id="countrySelect">
+                    <option value="">-- Select Country --</option>
+                </select>
+                <span asp-validation-for="CountryId" class="text-danger"></span>
+                <button type="button" class="btn btn-sm btn-outline-secondary mt-1" data-bs-toggle="modal" data-bs-target="#addCountryModal">
+                    Add New Country
+                </button>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CityId" class="control-label"></label>
+                <select asp-for="CityId" class="form-control" id="citySelect">
+                    <option value="">-- Select City --</option>
+                </select>
+                <span asp-validation-for="CityId" class="text-danger"></span>
+                <button type="button" class="btn btn-sm btn-outline-secondary mt-1" data-bs-toggle="modal" data-bs-target="#addCityModal">
+                    Add New City
+                </button>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ProfileImage" class="control-label" for="profileImage"></label>
+                <input asp-for="ProfileImage" class="form-control" type="file" id="profileImage" />
+                <span asp-validation-for="ProfileImage" class="text-danger"></span>
+                <div id="imageName" class="text-muted small mt-1"></div>
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Create" class="btn btn-primary" id="submitButton" />
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Add Country Modal -->
+<div class="modal fade" id="addCountryModal" tabindex="-1" aria-labelledby="addCountryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCountryModalLabel">Add New Country</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addCountryForm">
+                    <div class="mb-3">
+                        <label for="countryCode" class="form-label">Code (3 letters)</label>
+                        <input type="text" class="form-control" id="countryCode" name="Code"
+                               maxlength="3" required
+                               pattern="[A-Za-z]{3}"
+                               title="Please enter exactly 3 letters">
+                        <div class="invalid-feedback">
+                            Please enter exactly 3 letters for the country code.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="countryName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="countryName" name="Name"
+                               required
+                               maxlength="100">
+                        <div class="invalid-feedback">
+                            Please enter a country name.
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="saveCountryBtn">Create</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add City Modal -->
+<div class="modal fade" id="addCityModal" tabindex="-1" aria-labelledby="addCityModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCityModalLabel">Add New City</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addCityForm">
+                    <div class="mb-3">
+                        <label for="cityCode" class="form-label">Code (3 letters)</label>
+                        <input type="text" class="form-control" id="cityCode" name="Code" maxlength="3" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cityName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="cityName" name="Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cityCountryId" class="form-label">Country</label>
+                        <select class="form-control" id="cityCountryId" name="CountryId" required>
+                            <option value="">-- Select Country --</option>
+                            @foreach (var country in Model.Countries)
+                            {
+                                <option value="@country.Value">@country.Text</option>
+                            }
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                <button type="button" class="btn btn-primary" id="saveCityBtn">Create</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/customer.js" asp-append-version="true"></script>
+    <script>
+        $(document).ready(function() {
+            $.validator.unobtrusive.parse("#createCustomerForm");
+        });
+    </script>
+}

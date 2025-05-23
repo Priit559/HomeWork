@@ -1,0 +1,113 @@
+@model AJAXHomePage.Models.Customer
+@{
+    ViewData["Title"] = "Delete Customer";
+}
+
+<h1>Customer Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Country.Name)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.City.Name)
+        </dd>
+
+        @if (!string.IsNullOrEmpty(Model.ProfileImage))
+        {
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.ProfileImage)
+            </dt>
+            <dd class="col-sm-9">
+                <img src="~/images/@Model.ProfileImage" alt="Profile Image" class="img-thumbnail" style="max-width: 150px;" />
+            </dd>
+        }
+    </dl>
+
+    <div class="mt-3">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">
+            Delete Customer
+        </button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
+
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteConfirmationModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete customer <strong>@Model.FirstName @Model.LastName</strong>?</p>
+                <p class="text-danger">This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $('#confirmDeleteBtn').click(function() {
+                $.ajax({
+                    url: '@Url.Action("DeleteConfirmed", "Customer", new { id = Model.Id })',
+                    type: 'POST',
+                    headers: {
+                        'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function(result) {
+                        if (result.success) {
+                            window.location.href = '@Url.Action("Index", "Customer")';
+                        } else {
+                            alert(result.message || 'Error deleting customer');
+                            $('#deleteConfirmationModal').modal('hide');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Delete error:', error);
+                        alert('Error deleting customer. Please try again.');
+                        $('#deleteConfirmationModal').modal('hide');
+                    }
+                });
+            });
+        });
+    </script>
+    @Html.AntiForgeryToken()
+}

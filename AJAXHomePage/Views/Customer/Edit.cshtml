@@ -1,0 +1,163 @@
+﻿@model AJAXHomePage.Models.ViewModels.CustomerEditVM
+@{
+    ViewData["Title"] = "Edit Customer";
+}
+
+<h1>Edit Customer</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Id" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CountryId" class="control-label"></label>
+                <select asp-for="CountryId" asp-items="Model.Countries" class="form-control" id="countrySelect">
+                    <option value="">-- Select Country --</option>
+                </select>
+                <span asp-validation-for="CountryId" class="text-danger"></span>
+                <button type="button" class="btn btn-sm btn-outline-secondary mt-1" data-bs-toggle="modal" data-bs-target="#addCountryModal">
+                    Add New Country
+                </button>
+            </div>
+            <div class="form-group">
+                <label asp-for="CityId" class="control-label"></label>
+                <select asp-for="CityId" asp-items="Model.Cities" class="form-control" id="citySelect">
+                    <option value="">-- Select City --</option>
+                </select>
+                <span asp-validation-for="CityId" class="text-danger"></span>
+                <button type="button" class="btn btn-sm btn-outline-secondary mt-1" data-bs-toggle="modal" data-bs-target="#addCityModal">
+                    Add New City
+                </button>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProfileImage" class="control-label"></label>
+                <input asp-for="ProfileImage" class="form-control" type="file" />
+                <span asp-validation-for="ProfileImage" class="text-danger"></span>
+                <div id="imageName" class="text-muted small mt-1">
+                    @if (!string.IsNullOrEmpty(Model.ExistingImagePath))
+                    {
+                        <span>Current: @Model.ExistingImagePath</span>
+                    }
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Add Country Modal -->
+<div class="modal fade" id="addCountryModal" tabindex="-1" aria-labelledby="addCountryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCountryModalLabel">Add New Country</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addCountryForm">
+                    <div class="mb-3">
+                        <label for="countryCode" class="form-label">Code (3 letters)</label>
+                        <input type="text" class="form-control" id="countryCode" name="Code" maxlength="3" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="countryName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="countryName" name="Name" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                <button type="button" class="btn btn-primary" id="saveCountryBtn">Create</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add City Modal -->
+<div class="modal fade" id="addCityModal" tabindex="-1" aria-labelledby="addCityModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCityModalLabel">Add New City</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addCityForm">
+                    <div class="mb-3">
+                        <label for="cityCode" class="form-label">Code (3 letters)</label>
+                        <input type="text" class="form-control" id="cityCode" name="Code" maxlength="3" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cityName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="cityName" name="Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cityCountryId" class="form-label">Country</label>
+                        <select class="form-control" id="cityCountryId" name="CountryId" required>
+                            <option value="">-- Select Country --</option>
+                            @foreach (var country in Model.Countries)
+                            {
+                                <option value="@country.Value">@country.Text</option>
+                            }
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                <button type="button" class="btn btn-primary" id="saveCityBtn">Create</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function() {
+            // Country-City cascading dropdown
+            $('#countrySelect').change(function() {
+                var countryId = $(this).val();
+                if (countryId) {
+                    $('#citySelect').prop('disabled', false);
+                    $.getJSON('/Customer/GetCitiesByCountry', { countryId: countryId }, function(data) {
+                        var items = '<option value="">-- Select City --</option>';
+                        $.each(data, function(i, city) {
+                            items += `<option value="${city.id}">${city.name}</option>`;
+                        });
+                        $('#citySelect').html(items);
+                    });
+                } else {
+                    $('#citySelect').prop('disabled', true).html('<option value="">-- Select City --</option>');
+                }
+            });
+
+            // Initialize city dropdown if country is selected
+            if ($('#countrySelect').val()) {
+                $('#countrySelect').trigger('change');
+            }
+        });
+    </script>
+}

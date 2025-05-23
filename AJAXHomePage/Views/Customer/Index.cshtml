@@ -1,0 +1,19 @@
+﻿@model IEnumerable<AJAXHomePage.Models.Customer>
+@{
+    ViewData["Title"] = "Customers";
+}
+
+<h1>Customers</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+
+<div id="customerList" class="table-responsive">
+    @await Html.PartialAsync("_CustomerList", Model)
+</div>
+
+@section Scripts {
+    <script src="~/js/customer.js"></script>
+    @Html.AntiForgeryToken()
+}

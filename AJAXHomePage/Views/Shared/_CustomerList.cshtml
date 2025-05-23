@@ -1,0 +1,66 @@
+﻿@model IEnumerable<AJAXHomePage.Models.Customer>
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+@{
+    var token = Antiforgery.GetAndStoreTokens(Context).RequestToken;
+}
+
+<input type="hidden" name="__RequestVerificationToken" value="@token" />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Profile</th>
+            <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+            <th>@Html.DisplayNameFor(model => model.LastName)</th>
+            <th>@Html.DisplayNameFor(model => model.Email)</th>
+            <th>@Html.DisplayNameFor(model => model.Country)</th>
+            <th>@Html.DisplayNameFor(model => model.City)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ProfileImage))
+                    {
+                        <img src="~/images/@item.ProfileImage" alt="Profile" class="img-thumbnail" style="max-width: 50px;" />
+                    }
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
+                <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>@Html.DisplayFor(modelItem => item.Country.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.City.Name)</td>
+                <td>
+                    <div class="btn-group">
+                        <a asp-controller="Customer" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Edit</a>
+                        <a asp-controller="Customer" asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Details</a>
+                        <button type="button" class="btn btn-sm btn-danger" onclick="showDeleteModal(@item.Id, '@item.FirstName @item.LastName')">Delete</button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete customer <strong id="customerNameToDelete"></strong>?</p>
+                <p class="text-danger">This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
